@@ -8,22 +8,18 @@ imshow(img_double);
 title("original image");
 
 
-f=fspecial("gaussian",3);
+f=fspecial("laplacian",0.3);
 subplot(2,2,2);
 j=imfilter(img_double,f);
 imshow(j);
-title("High pass(gaussian) image");
+title("1st low pass(laplacian)");
 
-f=fspecial("laplacian",0.3);
 subplot(2,2,3);
-j=imfilter(img_double,f);
+j=imfilter(j,f);
 imshow(j);
-title("low pass(laplacian) image");
-
+title("2nd low pass(laplacian) ");
 
 subplot(2,2,4);
-A=[-1 -1 -1; -1 17 -1; -1 -1 -1];
-j=conv2(img_double,A);
+j=imfilter(j,f);
 imshow(j);
-title("high boost filter image");
-
+title("3rd low pass(laplacian)");
