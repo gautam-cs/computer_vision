@@ -11,14 +11,14 @@ title("original image");
 subplot(2,2,2);
 j=imnoise (img_double, "Gaussian");
 imshow(j);
-title("salt & paper noise std density");
+title("Gaussian std density");
 
 subplot(2,2,3);
 j=imnoise (img_double, "Gaussian",0.02);
 imshow(j);
-title("salt & paper noise, density=0.02");
+title("Gaussian, density=0.02");
 
 subplot(2,2,4);
 j=imnoise (img_double, "Gaussian",0.09);
 imshow(j);
-title("salt & paper noise, density=0.09");
+title("Gaussian, density=0.09");
