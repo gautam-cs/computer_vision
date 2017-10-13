@@ -19,7 +19,7 @@ yo=ceil(colsi/2);
 midx=ceil((size(C,1))/2);
 midy=ceil((size(C,2))/2);
 
-a=1, b=0.5, c=0.5, d=1;
+a=1, b=0, c=0.5, d=1;
 tx=10;
 ty=15;
 for i=1:size(C,1)-tx

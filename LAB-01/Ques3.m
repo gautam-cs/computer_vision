@@ -12,13 +12,13 @@ f=fspecial("gaussian",3);
 subplot(2,2,2);
 j=imfilter(img_double,f);
 imshow(j);
-title("High pass(gaussian) image");
+title("Low pass(gaussian) image");
 
 f=fspecial("laplacian",0.3);
 subplot(2,2,3);
 j=imfilter(img_double,f);
 imshow(j);
-title("low pass(laplacian) image");
+title("high pass(laplacian) image");
 
 
 subplot(2,2,4);

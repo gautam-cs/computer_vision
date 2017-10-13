@@ -14,13 +14,13 @@ j=imfilter(img_double,f);
 imshow(j);
 title("(LoG) imfilter, dim=3");
 
-f=fspecial("log",5);
+f=fspecial("log",5, spread=0.5);
 subplot(2,2,3);
 j=imfilter(img_double,f);
 imshow(j);
 title("(LoG) imfilter, dim=5");
 
-f=fspecial("log",9);
+f=fspecial("log",9,spread=0.8);
 subplot(2,2,4);
 j=imfilter(img_double,f);
 imshow(j);
